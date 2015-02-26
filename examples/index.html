@@ -46,7 +46,7 @@
 
         map = new L.Map('map', {
             layers: [osm],
-            center: new L.LatLng(34.760386, -86.610191),
+            center: new L.LatLng(50.60976, 3.13737),
             zoom: 19
         });
 
@@ -56,7 +56,7 @@
         // 1370729 is the OSM ID for the relation of the building used in this
         // example, it can be viewed online here:
         //   http://www.openstreetmap.org/relation/1370729
-        var query = '(relation(3293262);>>->.rels;>;);out;';
+        var query = '(relation(3440826);>>->.rels;>;);out;';
 
         $.get("//overpass-api.de/api/interpreter?data=" + query, function(data) {
             var geoJSON = osmtogeojson(data, {
